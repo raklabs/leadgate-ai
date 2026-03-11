@@ -1,0 +1,55 @@
+# Deterministic Lead Scoring Configuration (Spec 001 Section 4)
+# Business owners can adjust weights and thresholds here without modifying code or AI prompts.
+
+version: "1.0"
+min_confidence_threshold: 0.75
+
+tier_thresholds:
+  hot: 75
+  warm: 50
+  medium: 25
+  # Anything < medium is classified as "Cold"
+
+service_weights:
+  commercial_lease: 25
+  residential_sales: 25
+  advisory_consulting: 25
+  property_management: 15
+  renovation_fitout: 15
+  other: 5
+  missing: 0
+
+budget_brackets:
+  # Evaluated in descending order of min_amount
+  - min_amount: 50000
+    points: 30
+    label: "Enterprise / High Budget (>= 50k)"
+  - min_amount: 15000
+    points: 20
+    label: "Mid-Market Budget (15k - 49.9k)"
+  - min_amount: 5000
+    points: 10
+    label: "Entry Budget (5k - 14.9k)"
+  - min_amount: 0
+    points: 0
+    label: "Below Minimum Threshold (< 5k)"
+budget_missing_points: 0
+
+timeline_weights:
+  immediate: 20
+  short_term: 15
+  medium_term: 10
+  long_term: 2
+  exploratory: 2
+  missing: 0
+
+urgency_weights:
+  high: 15
+  medium: 8
+  low: 2
+  missing: 0
+
+contact_completeness:
+  both_email_and_phone: 10
+  either_email_or_phone: 5
+  neither: 0
