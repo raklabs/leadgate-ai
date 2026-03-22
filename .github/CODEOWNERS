@@ -1,0 +1,23 @@
+# ============================================================================
+# IntelligentStack AI (@raklabs) — Mandatory Code Ownership & Review Rules
+# ============================================================================
+# Every path in this repository requires explicit review and approval from
+# @raklabs when "Require review from Code Owners" is enabled in branch rules.
+
+# Global default owner for all files
+*                               @raklabs
+
+# Governance, Security & CI/CD Workflows (High-Sensitivity Paths)
+/.github/                       @raklabs
+/CONSTITUTION.md                @raklabs
+/SECURITY.md                    @raklabs
+/CONTRIBUTING.md                @raklabs
+/CODE_OF_CONDUCT.md             @raklabs
+/specs/                         @raklabs
+
+# Core Production Application, Prompts & Dependencies
+/app/                           @raklabs
+/config/                        @raklabs
+/scripts/                       @raklabs
+/tests/                         @raklabs
+/pyproject.toml                 @raklabs

@@ -1,0 +1,28 @@
+name: Feature or Specification Proposal
+description: Propose a Spec-Driven enhancement aligned with CONSTITUTION.md.
+title: "[Spec Proposal]: "
+labels: ["enhancement", "spec-proposal"]
+assignees:
+  - raklabs
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem Statement & Use Case
+      description: What production B2B lead qualification or guardrail challenge does this solve?
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance_criteria
+    attributes:
+      label: Proposed Acceptance Criteria
+      description: Testable, deterministic acceptance criteria (AC-1, AC-2, ...) required before implementation.
+    validations:
+      required: true
+  - type: checkboxes
+    id: governance
+    attributes:
+      label: Constitutional Alignment
+      options:
+        - label: This proposal preserves zero-PII logging, strict schema validation, and deterministic fallback behavior (`CONSTITUTION.md`).
+          required: true

@@ -1,0 +1,42 @@
+name: Bug Report
+description: Report a reproducible defect in LeadGate AI classification, guardrails, or API behavior.
+title: "[Bug]: "
+labels: ["bug", "triage"]
+assignees:
+  - raklabs
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for helping improve **LeadGate AI**. For security vulnerabilities, please use [Private Vulnerability Reporting](https://github.com/raklabs/leadgate-ai/security/advisories/new) instead of opening a public issue.
+  - type: textarea
+    id: summary
+    attributes:
+      label: Defect Summary
+      description: A concise description of the bug and which specification (`specs/*.md`) or module (`app/*`) is affected.
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: Steps to Reproduce
+      description: Exact command, payload, or test case that reproduces the issue.
+      placeholder: |
+        1. Run `.venv/bin/pytest ...`
+        2. Send payload `{...}` to `POST /api/v1/qualify`
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected vs. Actual Behavior
+      description: What should happen according to the specification vs. what actually occurred.
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Python & OS Environment
+      placeholder: "Python 3.12 / macOS or Ubuntu"
+    validations:
+      required: true

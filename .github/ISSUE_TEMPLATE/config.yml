@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 🔒 Security Vulnerability Report (Private Disclosure)
+    url: https://github.com/raklabs/leadgate-ai/security/advisories/new
+    about: Report a security or prompt-injection vulnerability privately under our SECURITY.md policy. Do NOT open a public issue for security flaws.
+  - name: 💼 IntelligentStack AI Consultancy Enquiries
+    url: https://github.com/raklabs
+    about: Connect with IntelligentStack AI (@raklabs) for production AI architecture and engineering engagements.
